@@ -21,6 +21,7 @@
     <modules>
         <module>springcloud-pojo</module>
         <module>springcloud-provider-dept-8001</module>
+        <module>springcloud-consumer-dept-80</module>
     </modules>
 
     <dependencies>

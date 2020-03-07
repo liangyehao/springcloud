@@ -2,7 +2,6 @@ package com.liang;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import tk.mybatis.spring.annotation.MapperScan;
 
 /**
  * @author liangyehao
@@ -11,9 +10,8 @@ import tk.mybatis.spring.annotation.MapperScan;
  * @content
  */
 @SpringBootApplication
-@MapperScan("com.liang.mapper")
-public class ApplicationDept8001 {
+public class ConsumerDept80 {
     public static void main(String[] args) {
-        SpringApplication.run(ApplicationDept8001.class,args);
+        SpringApplication.run(ConsumerDept80.class,args);
     }
 }
