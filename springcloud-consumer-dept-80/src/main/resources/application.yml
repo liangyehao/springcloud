@@ -1,2 +1,9 @@
 server:
   port: 80
+
+
+info:
+  app.name: springclould-consumer-dept80
+  company.name: https://github.com/liangyehao
+  build.artifactId: ${project.artifactId}
+  build.version: ${project.version}
