@@ -15,6 +15,7 @@ import java.util.List;
  * @content
  */
 @RestController
+@RequestMapping("/consumer")
 public class DeptController_consumer {
 
     private static final String REST_URL_PREFIX = "http://localhost:8001";
@@ -22,19 +23,24 @@ public class DeptController_consumer {
     @Autowired
     private RestTemplate restTemplate;
 
-    @GetMapping("/consumer/get/{id}")
+    @GetMapping("/dept/get/{id}")
     public Dept get(@PathVariable("id") Integer id){
         return restTemplate.getForObject(REST_URL_PREFIX + "/dept/get/" + id, Dept.class);
     }
 
-    @PostMapping("/consumer/add/")
+    @PostMapping("/dept/add/")
     public Boolean add(@RequestBody Dept dept){
         return restTemplate.postForObject(REST_URL_PREFIX + "/dept/add/", dept, Boolean.class);
     }
 
-    @GetMapping("/consumer/list")
+    @GetMapping("/dept/list")
     public List list(){
         return restTemplate.getForObject(REST_URL_PREFIX + "/dept/list", List.class);
+    }
+
+    @GetMapping("/dept/discovery")
+    public Object discovery(){
+        return restTemplate.getForObject(REST_URL_PREFIX + "/dept/discovery", Object.class);
     }
 
 }

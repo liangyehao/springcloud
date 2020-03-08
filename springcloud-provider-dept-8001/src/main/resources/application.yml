@@ -32,7 +32,7 @@ eureka:
     prefer-ip-address: true #访问路径可以显示ip地址
 
 info:
-  app.name: springclould-dept8001
+  app.name: springclould-dept
   company.name: https://github.com/liangyehao
   build.artifactId: ${project.artifactId}
   build.version: ${project.version}
