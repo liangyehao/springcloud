@@ -3,7 +3,7 @@ server:
 
 mybatis:
   type-aliases-package: com.liang.pojo
-  mapper-locations: classpath:mybatis/com.liang.mapper/**/*.xml
+  mapper-locations: classpath:mybatis/mapper/**/*.xml
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 #    cache-enabled: true

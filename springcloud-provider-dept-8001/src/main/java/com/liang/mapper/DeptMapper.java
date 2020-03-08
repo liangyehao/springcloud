@@ -11,4 +11,5 @@ import tk.mybatis.mapper.common.Mapper;
  */
 public interface DeptMapper extends Mapper<Dept> {
 
+    int insertDept(Dept dept);
 }

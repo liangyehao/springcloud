@@ -8,10 +8,15 @@
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="db_source" jdbcType="VARCHAR" property="dbSource" />
   </resultMap>
+
 <!--  <sql id="Base_Column_List">-->
 <!--    &lt;!&ndash;@mbg.generated&ndash;&gt;-->
 <!--    id, `name`, db_source-->
 <!--  </sql>-->
+  <insert id="insertDept" keyColumn="id" keyProperty="id" parameterType="com.liang.pojo.Dept" useGeneratedKeys="true">
+    insert into dept (`name`, db_source)
+    values (#{name}, DATABASE())
+  </insert>
 <!--  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">-->
 <!--    &lt;!&ndash;@mbg.generated&ndash;&gt;-->
 <!--    select -->
